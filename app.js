@@ -7,8 +7,6 @@ import cors from 'cors';
 
 app.use(cors());
 
-createCustomer("Matti", "Mallikas", "matti@mallikas.fi", "salasana");
-
 app.get('/', (req, res) => {
     res.send(listAllCustomers());
 });
