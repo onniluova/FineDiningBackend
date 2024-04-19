@@ -15,12 +15,18 @@ app.get('/', (req, res) => {
 });
 
 app.post('/register', async (req, res) => {
-    const newUser = req.body;
+    const newUser = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password
+    };
     try {
         const result = await createCustomer(newUser);
         res.status(201).send(result);
     } catch (error) {
-        res.status(500).send({message: 'Error registering new user'});
+        console.error(error);
+        res.status(500).send({message: 'Error registering new user', error: error.message});
     }
 });
 

@@ -7,6 +7,6 @@ export const listAllCustomers = async () => {
 };
 
 export const createCustomer = async (customer) => {
-    const [rows] = await promisePool.query('INSERT INTO Customer (first_name, last_name, email, password) VALUES (?, ?, ?, ?)', [customer.firstName, customer.lastName, customer.email, customer.password]);
+    const [rows] = await promisePool.query('INSERT INTO Customer (first_name, last_name, email, password) VALUES (?, ?, ?, ?)', [customer.first_name, customer.last_name, customer.email, customer.password]);
     return rows;
 };

@@ -31,6 +31,5 @@ function loginUser() {
             return;
         }
     }
-
     console.log("Error: Invalid username or password");
 }
