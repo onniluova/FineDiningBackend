@@ -1,5 +1,5 @@
 import express from 'express';
-import {listAllCustomers, createCustomer} from './Model/testiModel.js';
+import {listAllCustomers, createCustomer} from './Model/register-model.js';
 import bodyParser from 'body-parser';
 
 const hostname = '127.0.0.1';
@@ -10,7 +10,7 @@ import cors from 'cors';
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get('/list', (req, res) => {
     res.send(listAllCustomers());
 });
 
@@ -26,7 +26,7 @@ app.post('/register', async (req, res) => {
         res.status(201).send(result);
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Error registering new user', error: error.message});
+        res.status(500).send({message: 'Virhe rekisteröidessä käyttäjää', error: error.message});
     }
 });
 

@@ -1,25 +1,13 @@
-let users = [];
+import promisePool from './utils/database.js';
 
-function registerUser() {
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let username = document.getElementById('username').value;
-
-    for(let i = 0; i < users.length; i++) {
-        if(users[i].email === email || users[i].username === username) {
-            console.log("Error: User already exists");
-            return;
-        }
+export const registerUser = async (user) => {
+    const [existingUsers] = await promisePool.query('SELECT * FROM users WHERE email = ?', [user.email]);
+    if (existingUsers.length > 0) {
+        throw new Error('Käyttäjä on jo olemassa.');
     }
-
-    let newUser = {
-        email: email,
-        password: password,
-        username: username
-    };
-
-    users.push(newUser);
-}
+    const [rows] = await promisePool.query('INSERT INTO Customer (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)', [user.first_name, user.last_name, user.email, user.password, 'default_role']);
+    return rows;
+};
 
 function loginUser() {
     let password = document.getElementById('password').value;
@@ -27,9 +15,9 @@ function loginUser() {
 
     for(let i = 0; i < users.length; i++) {
         if(users[i].username === username && users[i].password === password) {
-            console.log("Login Success");
+            console.log("Kirjautuminen onnistui");
             return;
         }
     }
-    console.log("Error: Invalid username or password");
+    console.log("Error: Väärä salasana tai sähköposti");
 }
