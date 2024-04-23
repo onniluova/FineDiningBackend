@@ -20,6 +20,7 @@ export const loginUser = async (email, password) => {
         const match = await bcrypt.compare(password, user.password);
         if (match) {
             const token = jwt.sign({ id: user.id }, 'sala-avain', { expiresIn: '1h' });
+            console.log(token);
             return { user, token };
         }
     }
