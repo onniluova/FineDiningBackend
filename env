@@ -1,0 +1,4 @@
+DB_HOST=mysql.metropolia.fi
+DB_USER=jannassl
+DB_PASSWORD=Nassmag98
+DB_NAME=jannassl
