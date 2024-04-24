@@ -1,0 +1,86 @@
+{
+    "menu": {
+        "Alkuruoka": [
+            {
+                "nimi": "Taimen",
+                "kuvaus": "Kevyesti savustettua taimenta",
+                "hinta": 13.00
+            },
+            {
+                "nimi": "Kermainen lohikeitto",
+                "kuvaus": "Lohikeitto kermalla perinteiseen tapaan",
+                "hinta": 8.00
+            },
+            {
+                "nimi": "Parsa",
+                "kuvaus": "valkoista parsaa, simpukkasalaattia, suolaheinää",
+                "hinta": 10.00
+            },
+            {
+                "nimi" : "Hanhenmaksa",
+                "kuvaus": "Hauhalan hanhemaksamoussea, kirsika, millefeuille",
+                "hinta": 15.00
+            }
+
+        ],
+        "Pääruoka": [
+            {
+                "nimi": "Grillattu lohi",
+                "hinta": 18.00
+            },
+            {
+                "nimi": "Pippuripihvi",
+                "hinta": 22.00
+            },
+            {
+                "nimi": "Hummeri",
+                "kuvaus": "Hummeririsotto Provecale, sitruuna-sahramikreemi",
+                "hinta": 21.00
+            },
+            {
+                "nimi": "Dombes kana",
+                "kuvaus": "Dombesin kananrintaa, kevätnaurista, Blanquette-kastike",
+                "hinta": 18.00
+            }
+        ],
+        "Jälkiruoka": [
+            {
+                "nimi": "Suklaakakku",
+                "hinta": 6.00
+            },
+            {
+                "nimi": "Mansikkajäätelö",
+                "hinta": 5.00
+            },
+            {
+                "nimi": "Raparperi",
+                "kuvaus": "haudutettua raparperia, seljankukkapannacotta, valkosuklaata",
+                "hinta": 8.00
+            },
+            {
+                "nimi": "juustot",
+                "kuvaus": "Juustovalikoima, talon hilloke, pähkinä-hedelmäleipää",
+                "hinta": 6.00
+            }
+        ],
+        "Juomat": [
+            {
+                "nimi": "Punaviini",
+                "hinta": 7.00,
+                "alkoholipitoisuus": 11
+            },
+            {
+                "nimi": "Valkoviini",
+                "hinta": 7.00
+            },
+            {
+                "nimi": "Olut",
+                "hinta": 5.00
+            },
+            {
+                "nimi": "Vesi",
+                "hinta": 0.00
+            }
+        ]
+    }
+}
