@@ -21,7 +21,7 @@ app.get('/users', async (req, res) => {
         res.send(customers);
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Error retrieving customers', error: error.message});
+        res.status(500).send({message: 'Virhe asiakkaiden', error: error.message});
     }
 });
 
