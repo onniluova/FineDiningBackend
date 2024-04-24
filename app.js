@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
+import { createReservation } from './Model/reservation-model.js';
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -91,6 +92,36 @@ app.post('/menu', (req, res) => {
             res.send({message: 'Menu päivitetty onnistuneesti'});
         }
     });
+});
+
+app.post('/orders', async (req, res) => {
+    const newOrder = {
+        userId: req.body.userId,
+        orderItems: req.body.orderItems,
+        orderDate: req.body.orderDate
+    };
+    try {
+        const result = await createOrder(newOrder);
+        res.status(201).send({message: 'Tilaus onnistui', orderId: result.insertId});
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe luodessa tilausta', error: error.message});
+    }
+});
+
+app.post('/reservations', async (req, res) => {
+    const newReservation = {
+        userId: req.body.userId,
+        reservationDate: req.body.reservationDate,
+        customerCount: req.body.customerCount
+    };
+    try {
+        const result = await createReservation(newReservation);
+        res.status(201).send({message: 'Reservation created successfully', reservationId: result.insertId});
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Error creating reservation', error: error.message});
+    }
 });
 
 app.listen(port, hostname, () => {
