@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
-import { createReservation } from './Model/reservation-model.js';
+import { createReservation, getAllReservations } from './Model/reservation-model.js';
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -111,16 +111,25 @@ app.post('/orders', async (req, res) => {
 
 app.post('/reservations', async (req, res) => {
     const newReservation = {
-        userId: req.body.userId,
-        reservationDate: req.body.reservationDate,
-        customerCount: req.body.customerCount
+        customer_count: req.body.customer_count,
+        date: req.body.date
     };
     try {
-        const result = await createReservation(newReservation);
-        res.status(201).send({message: 'Reservation created successfully', reservationId: result.insertId});
+        const result = await createReservation(newReservation)
+        res.status(201).send({message: 'Varaus tehty onnistuneesti', reservationId: result.insertId});
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Error creating reservation', error: error.message});
+        res.status(500).send({message: 'Varauksen teossa ilmeni virhe', error: error.message});
+    }
+});
+
+app.get('/reservations', async (req, res) => {
+    try {
+        const reservations = await getAllReservations();
+        res.send(reservations);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Error retrieving reservations', error: error.message});
     }
 });
 
