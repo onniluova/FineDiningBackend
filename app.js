@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
-import { createReservation, getAllReservations } from './Model/reservation-model.js';
+import { createReservation, getAllReservations, getReservationsByUser } from './Model/reservation-model.js';
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -114,7 +114,8 @@ app.post('/reservations', async (req, res) => {
     const newReservation = {
         asiakas_id: req.body.asiakas_id,
         customer_count: req.body.customer_count,
-        date: req.body.date
+        date: req.body.date,
+        ajankohta: req.body.ajankohta
     };
     try {
         const result = await createReservation(newReservation)
