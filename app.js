@@ -98,6 +98,7 @@ app.post('/orders', async (req, res) => {
     const newOrder = {
         userId: req.body.userId,
         orderItems: req.body.orderItems,
+        orderStatus: req.body.orderStatus,
         orderDate: req.body.orderDate
     };
     try {
@@ -111,12 +112,17 @@ app.post('/orders', async (req, res) => {
 
 app.post('/reservations', async (req, res) => {
     const newReservation = {
+        asiakas_id: req.body.asiakas_id,
         customer_count: req.body.customer_count,
         date: req.body.date
     };
     try {
         const result = await createReservation(newReservation)
-        res.status(201).send({message: 'Varaus tehty onnistuneesti', reservationId: result.insertId});
+        if (result.length > 0) {
+            res.status(201).send({message: 'Varaus tehty onnistuneesti', asiakasid: result[0].asiakasid, reservationId: result[0].reservation_id});
+        } else {
+            res.status(201).send({message: 'Varaus tehty onnistuneesti, mutta asiakasid ja reservation_id ei löytynyt'});
+        }
     } catch (error) {
         console.error(error);
         res.status(500).send({message: 'Varauksen teossa ilmeni virhe', error: error.message});

@@ -63,24 +63,87 @@
                 "hinta": 6.00
             }
         ],
-        "Juomat": [
-            {
-                "nimi": "Punaviini",
-                "hinta": 7.00,
-                "alkoholipitoisuus": 11
-            },
-            {
-                "nimi": "Valkoviini",
-                "hinta": 7.00
-            },
-            {
-                "nimi": "Olut",
-                "hinta": 5.00
-            },
-            {
-                "nimi": "Vesi",
-                "hinta": 0.00
-            }
-        ]
+        "Juomat": {
+            "Valkoviinit": [
+                {
+                    "nimi": "Chablis 1er cru butteaux",
+                    "hinta": 380,
+                    "tilavuus": "pullo"
+                },
+                {
+                    "nimi": "Loibner Riesling Federspiel",
+                    "hinta": 18.00,
+                    "tilavuus": "12 cl"
+                },
+                {
+                    "nimi": "Bourgogne Cote D'or Chardonnay",
+                    "hinta": 24.00,
+                    "tilavuus": "12 cl"
+                },
+                {
+                    "nimi": "Chablis sous le parc",
+                    "hinta": 130,
+                    "tilavuus": "pullo"
+                }
+            ],
+            "Punaviinit": [
+                {
+                    "nimi": "E.Guigal / Gigondas",
+                    "hinta": 21.00,
+                    "tilavuus": "12 cl"
+                },
+                {
+                    "nimi": "Bourgogne pinot noir",
+                    "hinta": 21.00,
+                    "tilavuus": "12 cl"
+                },
+                {
+                    "nimi": "Le corton grand cru domaine",
+                    "hinta": 390,
+                    "tilavuus": "pullo"
+                },
+                {
+                    "nimi": "Volnay 1er cru volnay santenots-du-milieu",
+                    "hinta": 370,
+                    "tilavuus": "pullo"
+                }
+            ],
+            "Oluet": [
+                {
+                    "nimi": "sputnik",
+                    "hinta": "6.00/8.00/10.00",
+                    "Tilavuus": "0.2/0.3/0.5 L"
+                },
+                {
+                    "nimi": "Flat Beat",
+                    "hinta": "7.00/10.00/13.00",
+                    "Tilavuus": "0.2/0.3/0.5 L"
+                },
+                {
+                    "nimi": "Comet Watch",
+                    "hinta": "6.00/8.00/10.00",
+                    "Tilavuus": "0.2/0.3/0.5 L"
+                }
+            ],
+            "Muut": [
+                {
+                    "nimi": "vesi",
+                    "hinta": "0",
+                    "Tilavuus": ""
+                },
+                {
+                    "nimi": "Ananas lonkero",
+                    "hinta": "6.00/ 8.00",
+                    "Tilavuus": "0.33 / 0.5 L"
+                },
+                {
+                    "nimi": "Sandels",
+                    "hinta": "6",
+                    "Tilavuus": "0.5 L"
+                }
+            ]
+        }
+
+
     }
 }
