@@ -135,7 +135,17 @@ app.get('/reservations', async (req, res) => {
         res.send(reservations);
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Error retrieving reservations', error: error.message});
+        res.status(500).send({message: 'Virhe etsiessä varauksia', error: error.message});
+    }
+});
+
+app.get('/reservations/:asiakas_id', async (req, res) => {
+    try {
+        const reservations = await getReservationsByUser(req.params.asiakas_id);
+        res.send(reservations);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe etsiessä varauksia', error: error.message});
     }
 });
 

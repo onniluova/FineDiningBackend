@@ -24,3 +24,13 @@ export const getAllReservations = async () => {
     const [rows] = await promisePool.query('SELECT * FROM Reservations');
     return rows;
 };
+
+export const getReservationsByUser = async (asiakas_id) => {
+    const [rows] = await promisePool.query(`
+        SELECT Reservations.* 
+        FROM Reservations 
+        JOIN Transactions ON Reservations.id = Transactions.reservation_id 
+        WHERE Transactions.asiakas_id = ?
+    `, [asiakas_id]);
+    return rows;
+};
