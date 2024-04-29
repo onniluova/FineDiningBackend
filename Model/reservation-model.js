@@ -1,13 +1,13 @@
 import promisePool from '../utils/database.js';
 
 export const createReservation = async (reservation) => {
-    const { asiakas_id, reservationDate, customer_count, ajankohta } = reservation;
+    const { date, customer_count, ajankohta } = reservation;
 
-    const [rows] = await promisePool.execute(
-        'INSERT INTO Reservations (asiakas_id, date, time, customer_count, ajankohta) VALUES (?, ?, ?, ?)',
-        [asiakas_id, reservationDate, customer_count, ajankohta]
+    const [result] = await promisePool.execute(
+        'INSERT INTO Reservations (date, customer_count, ajankohta) VALUES (?, ?, ?)',
+        [date, customer_count, ajankohta]
     );
-    return rows;
+    return result.insertId; // This is the reservation_id of the newly created reservation
 };
 
 export const getAllReservations = async () => {
