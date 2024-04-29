@@ -6,7 +6,8 @@ import bodyParser from 'body-parser';
 
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
-import { createReservation, getAllReservations, getReservationsByUser } from './Model/reservation-model.js';
+import { createReservation, getAllReservations, getReservationsByUser, deleteReservation } from './Model/reservation-model.js';
+import { createOrder } from './Model/order-model.js';
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -96,22 +97,22 @@ app.post('/menu', (req, res) => {
 
 app.post('/orders', async (req, res) => {
     const newOrder = {
-        userId: req.body.userId,
-        orderItems: req.body.orderItems,
-        orderStatus: req.body.orderStatus,
-        orderDate: req.body.orderDate
+        asiakas_id: req.body.asiakas_id,
+        tila: req.body.tila,
+        paivamaara: req.body.paivamaara
     };
     try {
         const result = await createOrder(newOrder);
-        res.status(201).send({message: 'Tilaus onnistui', orderId: result.insertId});
+        res.status(201).send({message: 'Tilaus tehty onnistuneesti.', orderId: result.insertId});
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Virhe luodessa tilausta', error: error.message});
+        res.status(500).send({message: 'Virhe tehdessä tilausta', error: error.message});
     }
 });
 
 app.post('/reservations', async (req, res) => {
     const newReservation = {
+        asiakas_id: req.body.asiakas_id,
         customer_count: req.body.customer_count,
         date: req.body.date,
         ajankohta: req.body.ajankohta
@@ -142,6 +143,20 @@ app.get('/reservations/:asiakas_id', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).send({message: 'Virhe etsiessä varauksia', error: error.message});
+    }
+});
+
+app.delete('/reservations/:reservation_id', async (req, res) => {
+    try {
+        const result = await deleteReservation(req.params.reservation_id);
+        if (result.affectedRows === 0) {
+            res.status(404).send({message: 'Reservation not found'});
+        } else {
+            res.send({message: 'Reservation deleted successfully'});
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Error deleting reservation', error: error.message});
     }
 });
 

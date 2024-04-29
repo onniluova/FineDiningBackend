@@ -1,13 +1,13 @@
 import promisePool from '../utils/database.js';
 
 export const createReservation = async (reservation) => {
-    const { date, customer_count, ajankohta } = reservation;
+    const { asiakas_id, date, customer_count, ajankohta } = reservation;
 
     const [result] = await promisePool.execute(
-        'INSERT INTO Reservations (date, customer_count, ajankohta) VALUES (?, ?, ?)',
-        [date, customer_count, ajankohta]
+        'INSERT INTO Reservations (asiakas_id, date, customer_count, ajankohta) VALUES (?, ?, ?, ?)',
+        [asiakas_id, date, customer_count, ajankohta]
     );
-    return result.insertId; // This is the reservation_id of the newly created reservation
+    return result.insertId;
 };
 
 export const getAllReservations = async () => {
@@ -17,11 +17,15 @@ export const getAllReservations = async () => {
 
 export const getReservationsByUser = async (asiakas_id) => {
     const [rows] = await promisePool.query(`
-        SELECT Reservations.*
-        FROM Customer
-        JOIN Transactions ON Customer.asiakas_id = Transactions.asiakas_id
-        JOIN Reservations ON Transactions.reservation_id = Reservations.reservation_id
-        WHERE Customer.asiakas_id = ?
+        SELECT * FROM Reservations WHERE asiakas_id = ?
     `, [asiakas_id]);
     return rows;
+};
+
+export const deleteReservation = async (reservation_id) => {
+    const [result] = await promisePool.execute(
+        'DELETE FROM Reservations WHERE reservation_id = ?',
+        [reservation_id]
+    );
+    return result;
 };
