@@ -1,0 +1,72 @@
+  {
+  "menu": {
+    "Alkuruoka": [
+      {
+        "nimi": "Savustettua kuhaa",
+        "kuvaus": "Savustettua kuhaa rapeilla sienillä ja metsävadelmilla maustetulla crème frâichella",
+        "hinta": 15.00
+      },
+      {
+        "nimi": "Kevyt ja raikas gazpacho",
+        "kuvaus": "Kylmä gazpacho marinoitujen katkarapujen ja basilikan kera",
+        "hinta": 12.00
+      },
+      {
+        "nimi": "Paistettua artisokkaa",
+        "kuvaus": "Paistettua artisokkaa ja paahdettua punajuurta vuohenjuusto-cashew-kastikkeella",
+        "hinta": 14.00
+      },
+      {
+        "nimi": "Ankanmaksamoussea",
+        "kuvaus": "Ankanmaksamoussea karamellisoidulla sipulilla ja crostini-leivällä",
+        "hinta": 16.00
+      }
+    ],
+    "Pääruoka": [
+      {
+        "nimi": "Paistettua lohta",
+        "kuvaus": "Paistettua lohta fenkoli-kasvisrisoton ja sitruuna-voikastikkeen kera",
+        "hinta": 24.00
+      },
+      {
+        "nimi": "Karitsanpaistia",
+        "kuvaus": "Karitsanpaistia rosmariinilla ja valkosipulilla maustettujen perunoiden ja grillattujen vihannesten kera",
+        "hinta": 26.00
+      },
+      {
+        "nimi": "Paistettua härkää",
+        "kuvaus": "Paistettua härkää tryffellirisoton ja portviini-kastikkeen kera",
+        "hinta": 28.00
+      },
+      {
+        "nimi": "Portobello-sieni",
+        "kuvaus": "Portobello-sienitä täytettynä ricotta-juustolla ja paahdetuilla tomaateilla, tarjoiltuna timjamilla maustetun perunamuhennoksen kera",
+        "hinta": 22.00
+      }
+    ],
+    "Jälkiruoka": [
+      {
+        "nimi": "Suklaakakkua",
+        "kuvaus": "Suklaakakkua suklaamoussella ja karamellisoitujen pähkinöiden kera",
+        "hinta": 10.00
+      },
+      {
+        "nimi": "Mansikkajäätelöä",
+        "kuvaus": "Mansikkajäätelöä valkosuklaakastikkeella ja tuoreilla mintunlehdillä",
+        "hinta": 8.00
+      },
+      {
+        "nimi": "Raparperi-pannukakkua",
+        "kuvaus": "Raparperi-pannukakkua vaniljakastikkeella ja mansikilla",
+        "hinta": 9.00
+      },
+      {
+        "nimi": "Juustokakkua",
+        "kuvaus": "Juustokakkua passionhedelmäkastikkeella ja tuoreilla marjoilla",
+        "hinta": 11.00
+        }
+    ]
+  }
+}
+
+
