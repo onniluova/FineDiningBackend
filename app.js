@@ -99,7 +99,8 @@ app.post('/orders', async (req, res) => {
     const newOrder = {
         asiakas_id: req.body.asiakas_id,
         tila: req.body.tila,
-        paivamaara: req.body.paivamaara
+        paivamaara: req.body.paivamaara,
+        tuotteet: req.body.tuotteet
     };
     try {
         const result = await createOrder(newOrder);
