@@ -36,10 +36,6 @@ app.get('/users', async (req, res) => {
     }
 });
 
-app.post('/menu', (req, res) => {
-    res.send('Menu');
-});
-
 app.post('/register', async (req, res) => {
     const newUser = {
         first_name: req.body.first_name,
@@ -76,7 +72,7 @@ app.get('/menu', (req, res) => {
     fs.readFile(path.join(__dirname, 'menu.json'), 'utf8', (err, data) => {
         if (err) {
             console.error(err);
-            res.status(500).send({message: 'Error reading menu file', error: err.message});
+            res.status(500).send({message: 'Virhe lukiessa menua', error: err.message});
         } else {
             res.send(JSON.parse(data));
         }
