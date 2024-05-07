@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
 import { createReservation, getAllReservations, getReservationsByUser, deleteReservation } from './Model/reservation-model.js';
-import { createOrder } from './Model/order-model.js';
+import { createOrder, deleteOrder, getAllOrders, deleteAllOrders } from './Model/order-model.js';
 import { deleteUser } from "./Model/user-model.js";
 
 const hostname = '127.0.0.1';
@@ -33,7 +33,7 @@ app.get('/users', async (req, res) => {
         res.send(customers);
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Virhe asiakkaiden', error: error.message});
+        res.status(500).send({message: 'Virhe:', error: error.message});
     }
 });
 
@@ -105,6 +105,30 @@ app.post('/orders', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).send({message: 'Virhe tehdessä tilausta', error: error.message});
+    }
+});
+
+app.delete('/orders/:order_id', async (req, res) => {
+    try {
+        const result = await deleteOrder(req.params.order_id);
+        if (result.affectedRows === 0) {
+            res.status(404).send({message: 'Tilausta ei löytynyt'});
+        } else {
+            res.send({message: 'Tilaus poistettu'});
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe poistaessa tilausta', error: error.message});
+    }
+});
+
+app.get('/orders', async (req, res) => {
+    try {
+        const orders = await getAllOrders();
+        res.send(orders);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe etsiessä tilauksia', error: error.message});
     }
 });
 
@@ -185,8 +209,18 @@ app.get('/createAdmin', async (req, res) => {
         const result = await registerUser(testAdminUser);
         res.status(201).send({message: 'Test admin user created successfully', userId: result.insertId});
     } catch (error) {
-        console.error('Error creating test admin user:', error.message);
-        res.status(500).send({message: 'Error creating test admin user', error: error.message});
+        console.error('Virhe tehdessä adminia.', error.message);
+        res.status(500).send({message: 'Virhe tehdessä adminia.', error: error.message});
+    }
+});
+
+app.delete('/orders', async (req, res) => {
+    try {
+        const result = await deleteAllOrders();
+        res.send({message: 'Kaikki tilaukset poistettu.', affectedRows: result.affectedRows});
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe poistaessa tilauksia.', error: error.message});
     }
 });
 app.listen(port, hostname, () => {
