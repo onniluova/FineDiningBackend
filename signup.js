@@ -8,7 +8,7 @@ export const registerUser = async (user) => {
         throw new Error('Käyttäjä on jo olemassa.');
     }
     const hashedPassword = await bcrypt.hash(user.password, 10);
-    const [rows] = await promisePool.query('INSERT INTO Customer (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)', [user.first_name, user.last_name, user.email, hashedPassword, "user"]);
+    const [rows] = await promisePool.query('INSERT INTO Customer (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)', [user.first_name, user.last_name, user.email, hashedPassword, user.role]);
     console.log(rows);
     return rows;
 };

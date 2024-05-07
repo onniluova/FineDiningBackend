@@ -42,7 +42,7 @@ app.post('/register', async (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
-        role: "user"
+        role: req.body.role
     };
     try {
         const result = await registerUser(newUser);
@@ -157,6 +157,23 @@ app.delete('/reservations/:reservation_id', async (req, res) => {
     }
 });
 
+app.get('/createAdmin', async (req, res) => {
+    const testAdminUser = {
+        first_name: 'Test',
+        last_name: 'Admin',
+        email: 'testiadmin@admin.com',
+        password: 'testadmin123',
+        role: 'admin'
+    };
+
+    try {
+        const result = await registerUser(testAdminUser);
+        res.status(201).send({message: 'Test admin user created successfully', userId: result.insertId});
+    } catch (error) {
+        console.error('Error creating test admin user:', error.message);
+        res.status(500).send({message: 'Error creating test admin user', error: error.message});
+    }
+});
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
