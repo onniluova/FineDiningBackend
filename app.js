@@ -8,6 +8,7 @@ import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
 import { createReservation, getAllReservations, getReservationsByUser, deleteReservation } from './Model/reservation-model.js';
 import { createOrder } from './Model/order-model.js';
+import { deleteUser } from "./Model/user-model.js";
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -147,13 +148,27 @@ app.delete('/reservations/:reservation_id', async (req, res) => {
     try {
         const result = await deleteReservation(req.params.reservation_id);
         if (result.affectedRows === 0) {
-            res.status(404).send({message: 'Reservation not found'});
+            res.status(404).send({message: 'Varausta ei löytynyt'});
         } else {
-            res.send({message: 'Reservation deleted successfully'});
+            res.send({message: 'Varaus poistettu'});
         }
     } catch (error) {
         console.error(error);
-        res.status(500).send({message: 'Error deleting reservation', error: error.message});
+        res.status(500).send({message: 'Virhe poistaessa varausta', error: error.message});
+    }
+});
+
+app.delete('/users/:asiakas_id', async (req, res) => {
+    try {
+        const result = await deleteUser(req.params.asiakas_id);
+        if (result.affectedRows === 0) {
+            res.status(404).send({message: 'Käyttäjää ei löytynyt'});
+        } else {
+            res.send({message: 'Käyttäjä poistettu'});
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Virhe poistaessa käyttäjää', error: error.message});
     }
 });
 
