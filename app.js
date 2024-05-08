@@ -15,6 +15,8 @@ const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
 
+app.use(express.static('frontend-build'));
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
