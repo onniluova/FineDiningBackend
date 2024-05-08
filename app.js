@@ -9,6 +9,7 @@ import {registerUser, loginUser} from "./signup.js";
 import { createReservation, getAllReservations, getReservationsByUser, deleteReservation } from './Model/reservation-model.js';
 import { createOrder, deleteOrder, getAllOrders, deleteAllOrders } from './Model/order-model.js';
 import { deleteUser } from "./Model/user-model.js";
+import { fetchBikeRentalStations, getBikeStation } from './graph.js';
 
 const hostname = '127.0.0.1';
 const app = express();
@@ -223,6 +224,28 @@ app.delete('/orders', async (req, res) => {
         res.status(500).send({message: 'Virhe poistaessa tilauksia.', error: error.message});
     }
 });
+
+app.get('/reititys', async (req,res)=> {
+    try {
+        const result = await fetchBikeRentalStations();
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Error fetching bike rental stations.', error: error.message});
+    }
+});
+
+app.get('/reititys/:id', async (req, res) => {
+    try {
+        const result = await getBikeStation(req.params.id);
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({message: 'Error fetching bike station.', error: error.message});
+    }
+});
+
+
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
