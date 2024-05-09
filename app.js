@@ -11,7 +11,7 @@ import { createOrder, deleteOrder, getAllOrders, deleteAllOrders } from './Model
 import { deleteUser } from "./Model/user-model.js";
 import { fetchBikeRentalStations, getBikeStation } from './graph.js';
 
-const hostname = '127.0.0.1';
+const hostname = '10.120.32.92';
 const app = express();
 const port = 3000;
 
