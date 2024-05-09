@@ -1,147 +1,116 @@
 {
-    "menu": {
-        "Alkuruoka": [
-            {
-                "nimi": "Taimen",
-                "kuvaus": "Kevyesti savustettua taimenta",
-                "hinta": 13.00
-            },
-            {
-                "nimi": "Kermainen lohikeitto",
-                "kuvaus": "Lohikeitto kermalla perinteiseen tapaan",
-                "hinta": 8.00
-            },
-            {
-                "nimi": "Parsa",
-                "kuvaus": "valkoista parsaa, simpukkasalaattia, suolaheinää",
-                "hinta": 10.00
-            },
-            {
-                "nimi" : "Hanhenmaksa",
-                "kuvaus": "Hauhalan hanhemaksamoussea, kirsika, millefeuille",
-                "hinta": 15.00
-            }
-
-        ],
-        "Pääruoka": [
-            {
-                "nimi": "Grillattu lohi",
-                "hinta": 18.00
-            },
-            {
-                "nimi": "Pippuripihvi",
-                "hinta": 22.00
-            },
-            {
-                "nimi": "Hummeri",
-                "kuvaus": "Hummeririsotto Provecale, sitruuna-sahramikreemi",
-                "hinta": 21.00
-            },
-            {
-                "nimi": "Dombes kana",
-                "kuvaus": "Dombesin kananrintaa, kevätnaurista, Blanquette-kastike",
-                "hinta": 18.00
-            }
-        ],
-        "Jälkiruoka": [
-            {
-                "nimi": "Suklaakakku",
-                "hinta": 6.00
-            },
-            {
-                "nimi": "Mansikkajäätelö",
-                "hinta": 5.00
-            },
-            {
-                "nimi": "Raparperi",
-                "kuvaus": "haudutettua raparperia, seljankukkapannacotta, valkosuklaata",
-                "hinta": 8.00
-            },
-            {
-                "nimi": "Juustot",
-                "kuvaus": "Juustovalikoima, talon hilloke, pähkinä-hedelmäleipää",
-                "hinta": 6.00
-            }
-        ],
-        "Juomat": {
-            "Valkoviinit": [
-                {
-                    "nimi": "Chablis 1er cru butteaux",
-                    "hinta": 380,
-                    "tilavuus": "pullo"
-                },
-                {
-                    "nimi": "Loibner Riesling Federspiel",
-                    "hinta": 18.00,
-                    "tilavuus": "12 cl"
-                },
-                {
-                    "nimi": "Bourgogne Cote D'or Chardonnay",
-                    "hinta": 24.00,
-                    "tilavuus": "12 cl"
-                },
-                {
-                    "nimi": "Chablis sous le parc",
-                    "hinta": 130,
-                    "tilavuus": "pullo"
-                }
-            ],
-            "Punaviinit": [
-                {
-                    "nimi": "E.Guigal / Gigondas",
-                    "hinta": 21.00,
-                    "tilavuus": "12 cl"
-                },
-                {
-                    "nimi": "Bourgogne pinot noir",
-                    "hinta": 21.00,
-                    "tilavuus": "12 cl"
-                },
-                {
-                    "nimi": "Le corton grand cru domaine",
-                    "hinta": 390,
-                    "tilavuus": "pullo"
-                },
-                {
-                    "nimi": "Volnay 1er cru volnay santenots-du-milieu",
-                    "hinta": 370,
-                    "tilavuus": "pullo"
-                }
-            ],
-            "Oluet": [
-                {
-                    "nimi": "sputnik",
-                    "hinta": "6.00/8.00/10.00",
-                    "Tilavuus": "0.2/0.3/0.5 L"
-                },
-                {
-                    "nimi": "Flat Beat",
-                    "hinta": "7.00/10.00/13.00",
-                    "Tilavuus": "0.2/0.3/0.5 L"
-                },
-                {
-                    "nimi": "Comet Watch",
-                    "hinta": "6.00/8.00/10.00",
-                    "Tilavuus": "0.2/0.3/0.5 L"
-                }
-            ],
-            "Muut": [
-                {
-                    "nimi": "vesi",
-                    "hinta": "0",
-                    "Tilavuus": ""
-                },
-                {
-                    "nimi": "Ananas lonkero",
-                    "hinta": "6.00/ 8.00",
-                    "Tilavuus": "0.33 / 0.5 L"
-                },
-                {
-                    "nimi": "Sandels",
-                    "hinta": "6",
-                    "Tilavuus": "0.5 L"
-                }
-            ]
-        }
-    }
+  "menu": {
+    "Alkuruoka": [
+      {
+        "nimi": "Taimen",
+        "hinta": 13
+      },
+      {
+        "nimi": "Kermainen lohikeitto",
+        "hinta": 8
+      },
+      {
+        "nimi": "Parsa",
+        "hinta": 10
+      },
+      {
+        "nimi": "Hanhenmaksa",
+        "hinta": 15
+      }
+    ],
+    "Pääruoka": [
+      {
+        "nimi": "Grillattu lohi",
+        "hinta": 18
+      },
+      {
+        "nimi": "Pippuripihvi",
+        "hinta": 22
+      },
+      {
+        "nimi": "Hummeri",
+        "hinta": 21
+      },
+      {
+        "nimi": "Dombes kana",
+        "hinta": 18
+      }
+    ],
+    "Jälkiruoka": [
+      {
+        "nimi": "Suklaakakku",
+        "hinta": 10
+      },
+      {
+        "nimi": "Mansikkajäätelö",
+        "hinta": 5
+      },
+      {
+        "nimi": "Raparperi",
+        "hinta": 8
+      },
+      {
+        "nimi": "Juustot",
+        "hinta": 10
+      }
+    ],
+    "Juomat": [
+      {
+        "nimi": "Chablis 1er cru butteaux",
+        "hinta": 500
+      },
+      {
+        "nimi": "Loibner Riesling Federspiel",
+        "hinta": 18
+      },
+      {
+        "nimi": "Bourgogne Cote D'or Chardonnay",
+        "hinta": 24
+      },
+      {
+        "nimi": "Chablis sous le parc",
+        "hinta": 130
+      },
+      {
+        "nimi": "E.Guigal / Gigondas",
+        "hinta": 21
+      },
+      {
+        "nimi": "Bourgogne pinot noir",
+        "hinta": 21
+      },
+      {
+        "nimi": "Le corton grand cru domaine",
+        "hinta": 390
+      },
+      {
+        "nimi": "Volnay 1er cru volnay santenots-du-milieu",
+        "hinta": 370
+      },
+      {
+        "nimi": "sputnik",
+        "hinta": 0
+      },
+      {
+        "nimi": "Flat Beat",
+        "hinta": 0
+      },
+      {
+        "nimi": "Comet Watch",
+        "hinta": 0
+      },
+      {
+        "nimi": "Vesi",
+        "hinta": 0
+      },
+      {
+        "nimi": "Ananas lonkero",
+        "hinta": 5
+      },
+      {
+        "nimi": "Sandels",
+        "hinta": 6
+      }
+    ]
+  }
 }
