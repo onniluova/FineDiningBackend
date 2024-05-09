@@ -65,6 +65,64 @@
         "kuvaus": "Juustokakkua passionhedelmäkastikkeella ja tuoreilla marjoilla",
         "hinta": 11.00
         }
+    ],
+    "Juomat": [
+      {
+        "nimi": "Chablis 1er cru butteaux",
+        "hinta": 500
+      },
+      {
+        "nimi": "Loibner Riesling Federspiel",
+        "hinta": 18
+      },
+      {
+        "nimi": "Bourgogne Cote D'or Chardonnay",
+        "hinta": 24
+      },
+      {
+        "nimi": "Chablis sous le parc",
+        "hinta": 130
+      },
+      {
+        "nimi": "E.Guigal / Gigondas",
+        "hinta": 21
+      },
+      {
+        "nimi": "Bourgogne pinot noir",
+        "hinta": 21
+      },
+      {
+        "nimi": "Le corton grand cru domaine",
+        "hinta": 390
+      },
+      {
+        "nimi": "Volnay 1er cru volnay santenots-du-milieu",
+        "hinta": 370
+      },
+      {
+        "nimi": "sputnik",
+        "hinta": 0
+      },
+      {
+        "nimi": "Flat Beat",
+        "hinta": 0
+      },
+      {
+        "nimi": "Comet Watch",
+        "hinta": 0
+      },
+      {
+        "nimi": "Vesi",
+        "hinta": 0
+      },
+      {
+        "nimi": "Ananas lonkero",
+        "hinta": 5
+      },
+      {
+        "nimi": "Sandels",
+        "hinta": 6
+      }
     ]
   }
 }
