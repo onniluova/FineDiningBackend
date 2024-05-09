@@ -16,18 +16,6 @@ const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
 
-if (process.env.NODE_ENV === "IT") {
-    const sslkey = fs.readFileSync('/etc/pki/tls/private/ca.key')
-    const sslcert = fs.readFileSync('/etc/pki/tls/private/ca.key')
-
-    const options = {
-        key: sslkey,
-        cert: sslcert
-    }
-    const httpsPort = process.env.HTTPS_PORT || 8000;
-    https.createServer(options, app).listen(httpsPort);
-}
-
 app.use(express.static('frontend-build'));
 
 import { fileURLToPath } from 'url';
