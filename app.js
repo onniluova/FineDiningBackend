@@ -250,5 +250,5 @@ app.get('/reititys/:id', async (req, res) => {
 
 
 app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at https://${hostname}:${port}/`);
 });
