@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import https from 'https';
 
 import {listAllCustomers} from './Model/register-model.js';
 import {registerUser, loginUser} from "./signup.js";
@@ -11,9 +12,21 @@ import { createOrder, deleteOrder, getAllOrders, deleteAllOrders } from './Model
 import { deleteUser } from "./Model/user-model.js";
 import { fetchBikeRentalStations, getBikeStation } from './graph.js';
 
-const hostname = '10.120.32.92';
+const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
+
+if (process.env.NODE_ENV === "IT") {
+    const sslkey = fs.readFileSync('/etc/pki/tls/private/ca.key')
+    const sslcert = fs.readFileSync('/etc/pki/tls/private/ca.key')
+
+    const options = {
+        key: sslkey,
+        cert: sslcert
+    }
+    const httpsPort = process.env.HTTPS_PORT || 8000;
+    https.createServer(options, app).listen(httpsPort);
+}
 
 app.use(express.static('frontend-build'));
 
