@@ -3,114 +3,258 @@
     "Alkuruoka": [
       {
         "nimi": "Taimen",
-        "hinta": 13
+        "kuvaus": "Herkullinen taimen, tuoreiden kasvisten kera.",
+        "hinta": 13,
+        "allergeenit": ["kala"]
       },
       {
         "nimi": "Kermainen lohikeitto",
-        "hinta": 8
+        "kuvaus": "Perinteinen kermainen lohikeitto, joka tarjoillaan höyryävänä talon saaristolaisleivän ja ruskistetun voin kera.",
+        "hinta": 14,
+        "allergeenit": ["maito, gluteeni"]
       },
       {
         "nimi": "Parsa",
-        "hinta": 10
+        "kuvaus": "Maukasta valkoparsaa, joka tarjoillaan kevyesti yrttien maustamana ja hollandaise kastikkeen kera.",
+        "hinta": 15,
+        "allergeenit": ["muna"]
       },
       {
-        "nimi": "Hanhenmaksa",
-        "hinta": 15
+        "nimi": "Mustekalatartar",
+        "kuvaus": "Herkullinen ja raikas mustekalatartar, joka tarjoillaan sitruunavinaigretten ja tuoreiden yrttien kera.",
+        "hinta": 15,
+        "allergeenit": ["äyriäinen, muna"]
+      },
+      {
+        "nimi": "Salaatti capresella",
+        "kuvaus": "Raikas salaatti, jossa herkullista mozzarellaa, kirsikkatomaatteja ja tuoretta basilikaa, valutettuna oliiviöljyllä.",
+        "hinta": 12,
+        "allergeenit": ["maito"]
+      },
+      {
+        "nimi": "Kylmäsavulohi",
+        "kuvaus": "Herkullinen kylmäsavulohi tuoreiden yrttien ja sitruunan kera.",
+        "hinta": 14,
+        "allergeenit": ["kala"]
       }
     ],
     "Pääruoka": [
       {
         "nimi": "Grillattu lohi",
-        "hinta": 18
+        "kuvaus": "Mehevä grillattu lohi, joka tarjoillaan sesongin kasvisten ja perunamuusin kera.",
+        "hinta": 18,
+        "allergeenit": ["kala, maito"]
       },
       {
-        "nimi": "Pippuripihvi",
-        "hinta": 22
+        "nimi": "Wagyu Pihvi",
+        "kuvaus": "Wagyu-pihvi, joka tarjoillaan paahdettujen perunoiden, vihannesten ja erityisen kastikkeen kera.",
+        "hinta": 50,
+        "allergeenit": []
       },
       {
         "nimi": "Hummeri",
-        "hinta": 21
+        "kuvaus": "Herkullinen hummeriannos, joka tarjoillaan voilla paahdettujen perunoiden ja sitruunavoikastikkeen kera.",
+        "hinta": 21,
+        "allergeenit": ["äyriäinen, maito"]
       },
       {
         "nimi": "Dombes kana",
-        "hinta": 18
+        "kuvaus": "Maukas Dombes kana, joka tarjoillaan kermaisen risoton ja sesongin kasvisten kera.",
+        "hinta": 18,
+        "allergeenit": ["siipikarja, maito"]
+      },
+      {
+        "nimi": "Dry Aged Pihvi",
+        "kuvaus": "Herkullinen dry aged pihvi, joka tarjoillaan paahdettujen perunoiden ja vihannesten kera.",
+        "hinta": 25,
+        "allergeenit": []
+      },
+      {
+        "nimi": "Pasta Carbonara",
+        "kuvaus": "Perinteinen pasta carbonara, joka tarjoillaan tuoreen parmesaanin ja mustapippurin kera.",
+        "hinta": 20,
+        "allergeenit": ["maito, gluteeni"]
       }
     ],
     "Jälkiruoka": [
       {
+        "nimi": "Aprikoosisoufflé",
+        "kuvaus": "Ilmava ja herkullinen aprikoosisoufflé, joka tarjoillaan vaniljakastikkeen kera.",
+        "hinta": 10,
+        "allergeenit": ["maito, kananmuna"]
+      },
+      {
+        "nimi": "Eksoottinen hedelmäsalaatti",
+        "kuvaus": "Raikas ja eksoottinen hedelmäsalaatti, joka tarjoillaan tuoreiden mintunlehtien ja suklaan kera.",
+        "hinta": 8,
+        "allergeenit": []
+      },
+      {
         "nimi": "Suklaakakku",
-        "hinta": 10
+        "kuvaus": "Herkullinen suklaakakku, jonka päällä sulaa vaniljajäätelö ja tuoreita marjoja.",
+        "hinta": 12,
+        "allergeenit": ["maito", "muna", "gluteeni"]
       },
       {
         "nimi": "Mansikkajäätelö",
-        "hinta": 5
+        "kuvaus": "Raikas mansikkajäätelö, joka tarjoillaan tuoreiden mansikoiden ja mintunlehtien kera.",
+        "hinta": 5,
+        "allergeenit": ["maito"]
       },
       {
         "nimi": "Raparperi",
-        "hinta": 8
+        "kuvaus": "Raparperia vaniljakastikkeen ja rapean muruseoksen kera.",
+        "hinta": 8,
+        "allergeenit": ["gluteeni", "maito"]
       },
       {
         "nimi": "Juustot",
-        "hinta": 10
+        "kuvaus": "Herkullinen valikoima juustoja, joka kruunataan hunajalla, pähkinöillä ja hilloilla.",
+        "hinta": 10,
+        "allergeenit": ["maito, pähkinä"]
       }
     ],
-    "Juomat": [
-      {
-        "nimi": "Chablis 1er cru butteaux",
-        "hinta": 500
-      },
-      {
-        "nimi": "Loibner Riesling Federspiel",
-        "hinta": 18
-      },
-      {
-        "nimi": "Bourgogne Cote D'or Chardonnay",
-        "hinta": 24
-      },
-      {
-        "nimi": "Chablis sous le parc",
-        "hinta": 130
-      },
-      {
-        "nimi": "E.Guigal / Gigondas",
-        "hinta": 21
-      },
-      {
-        "nimi": "Bourgogne pinot noir",
-        "hinta": 21
-      },
-      {
-        "nimi": "Le corton grand cru domaine",
-        "hinta": 390
-      },
-      {
-        "nimi": "Volnay 1er cru volnay santenots-du-milieu",
-        "hinta": 370
-      },
-      {
-        "nimi": "sputnik",
-        "hinta": 0
-      },
-      {
-        "nimi": "Flat Beat",
-        "hinta": 0
-      },
-      {
-        "nimi": "Comet Watch",
-        "hinta": 0
-      },
-      {
-        "nimi": "Vesi",
-        "hinta": 0
-      },
-      {
-        "nimi": "Ananas lonkero",
-        "hinta": 5
-      },
-      {
-        "nimi": "Sandels",
-        "hinta": 6
-      }
-    ]
+    "Juomat": {
+      "Valkoviinit": [
+        {
+          "nimi": "Chablis 1er cru butteaux",
+          "hinta": "18.00/24.00",
+          "tilavuus": "8 cl/12 cl"
+        },
+        {
+          "nimi": "Loibner Riesling Federspiel",
+          "hinta": "12.00/18.00",
+          "tilavuus": "8 cl/12 cl"
+        },
+        {
+          "nimi": "Bourgogne Cote D'or Chardonnay",
+          "hinta": "18.00/24.00",
+          "tilavuus": "8 cl/12 cl"
+        },
+        {
+          "nimi": "Chablis sous le parc",
+          "hinta": "18.00/24.00",
+          "tilavuus": "8 cl/12 cl"
+        },
+        {
+          "nimi": "Sancerre Masaique Calclaire",
+          "hinta": "21.00/30.00",
+          "tilavuus": ["8 cl/12 cl"]
+        },
+        {
+          "nimi": "Scharzhof Riesling",
+          "hinta": "21.00/30.00",
+          "tilavuus": ["8 cl/12 cl"]
+        }
+      ],
+      "Punaviinit": [
+        {
+          "nimi": "E.Guigal / Gigondas",
+          "hinta": 21.00,
+          "tilavuus": "12 cl"
+        },
+        {
+          "nimi": "Bourgogne pinot noir",
+          "hinta": 21.00,
+          "tilavuus": "12 cl"
+        },
+        {
+          "nimi": "Le corton grand cru domaine",
+          "hinta": 390,
+          "tilavuus": "pullo"
+        },
+        {
+          "nimi": "Volnay 1er cru volnay santenots-du-milieu",
+          "hinta": 370,
+          "tilavuus": "pullo"
+        },
+        {
+          "nimi": "Bourgogne Pinot Noir",
+          "hinta": "21.00/30.00",
+          "tilavuus": ["8 cl/12 cl"]
+        },
+        {
+          "nimi": "Aalto",
+          "hinta": "21.00/30.00",
+          "tilavuus": ["8 cl/12 cl"]
+        }
+      ],
+      "Oluet": [
+        {
+          "nimi": "Sputnik",
+          "hinta": "6.00/8.00/10.00",
+          "Tilavuus": "0.2/0.3/0.5 L"
+        },
+        {
+          "nimi": "Flat Beat",
+          "hinta": "7.00/10.00/13.00",
+          "Tilavuus": "0.2/0.3/0.5 L"
+        },
+        {
+          "nimi": "Comet Watch",
+          "hinta": "6.00/8.00/10.00",
+          "Tilavuus": "0.2/0.3/0.5 L"
+        },
+        {
+          "nimi": "Sandels",
+          "hinta": "6.00/9.00",
+          "Tilavuus": "0.3l/0.5 L"
+        }
+      ],
+      "Lonkerot": [
+        {
+          "nimi": "Ananas lonkero",
+          "hinta": "6.00/ 8.00",
+          "Tilavuus": "0.33 / 0.5 L"
+        },
+        {
+          "nimi": "Greippi lonkero",
+          "hinta": "6.00/ 8.00",
+          "Tilavuus": "0.33 / 0.5 L"
+        },
+        {
+          "nimi": "Tyrni lonkero",
+          "hinta": "6.00/ 8.00",
+          "Tilavuus": "0.33 / 0.5 L"
+        },
+        {
+          "nimi": "Karpalo lonkero",
+          "hinta": "6.00/ 8.00",
+          "Tilavuus": "0.33 / 0.5 L"
+        }
+      ],
+      "Muut": [
+        {
+          "nimi": "vesi",
+          "hinta": "0",
+          "Tilavuus": ""
+        },
+        {
+          "nimi": "Kivennäisvesi",
+          "hinta": "3",
+          "Tilavuus": "0.33 L"
+        },
+        {
+          "nimi": "Vichy",
+          "hinta": "3",
+          "Tilavuus": "0.33 L"
+        },
+        {
+          "nimi": "Coca cola",
+          "hinta": "4.00",
+          "Tilavuus": "0.33 L"
+        },
+        {
+          "nimi": "Sprite",
+          "hinta": "4.00",
+          "Tilavuus": "0.33 L"
+        },
+        {
+          "nimi": "Fanta",
+          "hinta": "4.00",
+          "Tilavuus": "0.33 L"
+        }
+      ]
+    }
   }
 }
