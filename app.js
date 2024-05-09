@@ -74,7 +74,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/menu', (req, res) => {
-    fs.readFile(path.join(__dirname, 'menu2.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'menu.json'), 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send({message: 'Virhe lukiessa menua', error: err.message});
