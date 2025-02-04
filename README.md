@@ -32,7 +32,44 @@ Ensure you have the following installed on your machine:
 ``cd FineDiningBackend``
 
 # Run the Backend Server
-
 ``npm run dev``
 
 This will start the backend server on the specified port (default: 5000).
+
+# API Endpoints
+
+## Authentication
+
+- POST /api/auth/register - Register a new user
+
+- POST /api/auth/login - Authenticate and retrieve a token
+
+- POST /api/auth/logout - Log out the user
+
+## User Management
+
+- GET /api/users/profile - Retrieve user profile details
+
+- PUT /api/users/update - Update user details
+
+## Reservations
+
+- POST /api/reservations - Make a table reservation
+
+- GET /api/reservations - View reservations (Admin only)
+
+- DELETE /api/reservations/:id - Cancel a reservation
+
+## Orders
+
+- POST /api/orders - Place a new order
+
+- GET /api/orders - Retrieve all orders (Admin only)
+
+- DELETE /api/orders/:id - Cancel an order
+
+## Admin Features
+
+- PUT /api/admin/reservations/:id - Modify reservations
+
+- PUT /api/admin/orders/:id - Update order status
