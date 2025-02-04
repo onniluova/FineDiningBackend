@@ -30,3 +30,9 @@ Ensure you have the following installed on your machine:
 ``git clone https://github.com/onniluova/FineDiningBackend.git ``
 ## Install dependencies
 ``cd FineDiningBackend``
+
+# Run the Backend Server
+
+``npm run dev``
+
+This will start the backend server on the specified port (default: 5000).
