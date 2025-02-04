@@ -73,3 +73,11 @@ This will start the backend server on the specified port (default: 5000).
 - PUT /api/admin/reservations/:id - Modify reservations
 
 - PUT /api/admin/orders/:id - Update order status
+
+## Contributors
+
+Onni Luova
+
+Jan Nässling
+
+Ilmari Elomaa
